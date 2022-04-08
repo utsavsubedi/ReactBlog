@@ -41,3 +41,17 @@ a{
 .nav-links a:hover{
   color: #DDD1C7;
 }
+
+.blog-preview{
+  margin: 20px 15vw;
+  padding: 10px ;
+  text-align: left;
+}
+
+.title{
+  color: #7E8987;
+}
+
+.blog-preview:hover{
+  box-shadow: 1px 3px 5px  rgba(0,0,0,0.1);
+}
