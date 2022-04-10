@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 
 const Home = () => {
-   const [blogs, setBlogs] = useState([
-       {"title":"First Blog", "aurthor":"utsav", "content":"lorem ipsum...", "id":1},
-       {"title":"Second Blog", "aurthor":"not utsav", "content":"lorem ipsum...", "id":2},
-       {"title":"Third Blog", "aurthor":"maybe utsav", "content":"lorem ipsum...", "id":3},
-       {"title":"Forth Blog", "aurthor":"definitely utsav", "content":"lorem ipsum...", "id":4},
-   ])
+   const [blogs, setBlogs] = useState(null);
+   const [isPending, setIsPending] = useState(true);
+
+   useEffect(() => {
+       setTimeout(
+           () => {
+            fetch('http://localhost:8000/blogs')
+            .then(res => res.json())
+            .then( data => setBlogs(data));
+            setIsPending(false);
+           }
+       ,1000)
+   }, [] );
     return (
         <div className="home">
-            <BlogList blogs={blogs} title='All Blogs' /> 
+            { isPending && <h2>Loading.......</h2> }
+            {blogs && <BlogList blogs={blogs} title='All Blogs' />} 
         </div>
     );
 }
