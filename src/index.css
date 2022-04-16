@@ -75,7 +75,47 @@ form{
   margin: auto;
 }
 
-form input, form textarea{
+form input, form textarea, form select{
   height: 25px;
   margin: 10px 0px 10px 0px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+form select{
+  height: 35px;
+}
+
+form input:focus, form textarea:focus, form select:focus{
+  outline: none;
+}
+
+form textarea{
+  height: 50px;
+}
+
+form button{
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  background-color: #4b4a67;
+  color:#DDD1C7;
+}
+
+form button:hover{
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #DDD1C7;
+  color: #4b4a67;
 }
