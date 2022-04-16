@@ -95,7 +95,7 @@ form textarea{
   height: 50px;
 }
 
-form button{
+button{
   outline: none;
   border: none;
   padding: 10px;
@@ -107,7 +107,7 @@ form button{
   color:#DDD1C7;
 }
 
-form button:hover{
+button:hover{
   outline: none;
   border: none;
   padding: 10px;
