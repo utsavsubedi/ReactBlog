@@ -64,3 +64,18 @@ a{
 .blog-details{
   color: #4b4a67;
 }
+
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 540px;
+  margin: auto;
+}
+
+form input, form textarea{
+  height: 25px;
+  margin: 10px 0px 10px 0px;
+}
